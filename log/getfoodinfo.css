@@ -1,10 +1,116 @@
+@media only screen and (max-width: 320px) {
+  .container {
+    /* Styles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* display: contents; */
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-items: center;
+  font-weight: 800;
+}
+.we {
+  font-weight: 800;
+}
+.rec1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: 371px;
+  left: 15px;
+  top: 187px;
+  margin-top: 23px;
+  background: #d9d9d9;
+  border-radius: 23px;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.3);
+}
+.profile {
+  display: inline-block;
+  margin: 8px;
+  width: 64px;
+  height: 64px;
+  margin-left: 8px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background: #a16afb;
+}
+
+.rec2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: 199px;
+  background: #fff2f2;
+  border-radius: 15px;
+  color: red;
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: auto;
+  width: 273px;
+  height: 48px;
+  text-align: center;
+  background: #17ff74;
+  border-radius: 30px;
+  font-weight: 900;
+  color: black;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+.timetext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 900;
+}
+
+
 .navbar {
-    background: rgb(0, 0, 0);
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-   
-  }
-  .navbar a {
-    color: rgb(255, 255, 255);
-    
-  }
+  background: rgb(0, 0, 0);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.navbar a {
+  color: rgb(255, 255, 255);
+}
+.rec6 {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 528px;
+  height: 349px;
+  background: #f8aaaa;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+.rec7 {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 473px;
+  height: 183px;
+  background: #d9d9d9;
+  border-radius: 10px;
+}
+.sendsmstext{
+  margin-top: 40px;
+}

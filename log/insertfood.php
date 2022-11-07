@@ -29,8 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $howmuch = $_POST["howmuchfood"];
   $address = $_POST["address"];
   $number = $_POST["number"];
+  $email = $_POST["email"];
 
-  $sql = "INSERT INTO `food_info` (`username`, `howmuchfoodforpeople`, `address`, `mobileNo`, `dt`) VALUES ('$username1', '$howmuch', '$address', '$number', current_timestamp());";
+  $sql = "INSERT INTO `food_info` (`username`, `howmuchfoodforpeople`, `address`, `mobileNo`, `Email`, `dt`) VALUES ('$username1', '$howmuch', '$address', '$number', '$email', current_timestamp());";
   $result = mysqli_query($conn, $sql);
   if ($result) {
     $showAlert = true;
@@ -39,7 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $howmuch = $_POST["howmuchfood"];
     $address = $_POST["address"];
     $number = $_POST["number"];
-    $sql2 = "INSERT INTO `$username1` (`$username1`, `how_much_food`, `food_address`, `mobile_no`, `date_time`) VALUES ('$username1', '$howmuch', '$address', '$number', current_timestamp());";
+    $email = $_POST["email"];
+    $sql2 = "INSERT INTO `$username1` (`$username1`, `how_much_food`, `food_address`, `mobile_no`, `your_email`, `date_time`) VALUES ('$username1', '$howmuch', '$address', '$number', '$email', current_timestamp());";
     $result2 = mysqli_query($conn, $sql2);
   }
 }
@@ -89,6 +91,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
           <label for="">Enter Your Valid Mobile Number</label>
           <input type="number" placeholder="Mobile No" class="form-control" maxlength="12" minlength="10" name="number" id="number">
+        </div>
+        <div class="form-group">
+          <label for="">Email Address</label>
+          <input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
         </div>
         <button type="submit" class="btn btn-primary">Donate</button>
       </form>

@@ -62,7 +62,7 @@ body{
     margin-right: auto;
     width: auto;
     height: 199px;
-    background: #fff2f2;
+    background: #ffffff;
     border-radius: 15px;
     color: red;
   }
@@ -102,4 +102,10 @@ body{
   .navbar a {
     color: rgb(255, 255, 255);
     
+  }
+  .profile img{
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }

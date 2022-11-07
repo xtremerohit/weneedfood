@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $info = $_POST["info"];
   $password = $_POST["password"];
   $cpassword = $_POST["cpassword"];
+  $email = $_POST["email"];
   // $exists=false;
 
   //check whether this username Exist
@@ -21,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // $exists = false;
     if (($password == $cpassword)) {
       // $sql = "INSERT INTO `feeders` ( `username`, `password`, `dt`) VALUES ('$username', '$password', current_timestamp())";
-      $sql = "INSERT INTO `givers` (`giversName`, `giverspass`, `giversinfo`, `dt`) VALUES ('$username', '$password', '$info', current_timestamp())";
+      $sql = "INSERT INTO `givers` (`giversName`, `giverspass`, `giversinfo`, `email`,  `dt`) VALUES ('$username', '$password', '$info', '$email', current_timestamp())";
       $result = mysqli_query($conn, $sql);
       if ($result) {
         $showAlert = true;
@@ -33,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           how_much_food VARCHAR(225) NOT NULL,
           food_address VARCHAR(225)  NOT NULL,
           mobile_no VARCHAR(225)  NOT NULL,
+          your_email VARCHAR(225)  NOT NULL,
           date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
           )";
           $run = mysqli_query($conns, $sql2);
@@ -92,6 +94,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="form-group">
               <input type="password" class="form-control" id="cpassword" placeholder="Confirm Password" minlength="8" maxlength="12" name="cpassword">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Enter You Email" name="email">
             </div>
 
 

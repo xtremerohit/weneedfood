@@ -49,7 +49,9 @@ if (!$conn) {
     echo '<div class="container">
     <div class="rec1">
       <div class="container2">
-        <div class="profile"></div>
+        <div class="profile">
+        <img src="https://i.pravatar.cc/64" alt="">
+        </div>
         <div class="usernametext"><p><b>@'.$usernames.'</b></p></div>
       </div>
       <div class="rec2 text-center">
