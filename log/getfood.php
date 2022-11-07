@@ -47,21 +47,18 @@ if (!$conn) {
     $date_time = $row['dt'];
 
     echo '<div class="container">
-    <div class="rec1">
+    <div class="rec1" style="max-width: 334px;
+    max-height: 234px;">
       <div class="container2">
         <div class="profile">
         <img src="https://i.pravatar.cc/64" alt="">
         </div>
         <div class="usernametext"><p><b>@'.$usernames.'</b></p></div>
       </div>
-      <div class="rec2 text-center">
-        <div class="we">
-          <p>We Have Food!! '.$id.'</p>
-        </div>
-        <div class="info">
-          <p class="text-center " >'.$howmuchfoodforpeople.'</p>
-        </div>
+      <div class="we text-center">
+        <p>We Have Food For Donation!!!</p>
       </div>
+      
         <a href="getfoodinfo.php?catid='.$id.'" class="btn">See All Information</a>
       <div class="timetext mt-2"><p style="font-size: 12px;" ><b>Posted At '.$date_time.'</b></p></div>
     </div>
@@ -70,25 +67,7 @@ if (!$conn) {
 
   }
   ?>
-      <div class="container">
-        <div class="rec1">
-          <div class="container2">
-            <div class="profile"></div>
-            <div class="usernametext"><p><b>@rohitgaikwad</b></p></div>
-          </div>
-          <div class="rec2 text-center">
-            <div class="we">
-              <p>We Have Food!!</p>
-            </div>
-            <div class="info">
-              <p class="text-center " >Hii Rohit</p>
-            </div>
-          </div>
-            <!-- <button type="button" class="btn text-center"><p><b> Get All information</b></p></button> -->
-            <button type="button" class="btn btn-primary">Primary</button>
-          <div class="timetext mt-2"><p style="font-size: 12px;" ><b>Posted At 11:00 PM</b></p></div>
-        </div>
-      </div>
+ 
 
 <!--  -->
 

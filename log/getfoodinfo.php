@@ -50,32 +50,37 @@ if (!$conn) {
     $datetime = $row['dt'];
     $massage = "We will distribute food to homeless and needy people. my self @$usernames ";
     echo '<div class="container">
-        <div class="profile"></div>
-        <div class="usernametext"><p><b>@'.$usernames.'</b></p></div>
+        <div class="profile">
+        <img src="https://i.pravatar.cc/64" alt="">
+        </div>
+        <div class="usernametext"><p><b>Post by @' . $usernames . '</b></p></div>
             <div class="rec1">
               <div class="container2">
               </div>
               <div class="rec2 text-center">
                 <div class="we">
-                  <p>We Have Food!!</p>
+                  <p">Information About Donation!!!</p>
                 </div>
                 <div class="info">
-                  <p class="text-left ml-2 " style="color: black;" >Hii Rohit</p>
+                  <p class="text-left ml-2 " style="color: black; font-weight: 700; font-size: 17px;" >Addres: ' . $address . '</p>
                 </div>
               </div>
                 <!-- <button type="button" class="btn text-center"><p><b> Get All information</b></p></button> -->
                 <div class="rec10" style="display: flex;
       flex-direction: row;">
-            <a href="sms:+91'.$mobileno.'" class="btn btn-primary">Send Requast by SMS</a>
-            <a href="mailto:'.$email.'?subject=Request&body='.$massage.'" class="btn btn-primary">Send Requast by Email</a>
-                  <!-- <button type="button" class="btn btn-primary">Primar</button> -->
-                </div>
-              <div class="timetext mt-2"><p style="font-size: 12px;" ><b>Posted At '.$datetime.'</b></p></div>
-            </div>
-          </div>';
-      }
-      ?>
-      <!-- <button type="button" class="btn btn-primary">Send Requast</button> -->
+      <a href="<a href="sms:+91'. $mobileno .'"><button type="button" class="btn btn-primary btn-sm">Send Requast by <br> SMS</button></a>
+      <a href="mailto:' . $email . '?subject=Request&body=' . $massage . '"><button type="button" class="btn btn-secondary btn-sm">Send Requast by <br> Email</button></a>
+      <!-- <button type="button" class="btn btn-primary">Primar</button> -->
+      </div>
+      <div class="timetext mt-2"><p style="font-size: 12px;" ><b>Posted At ' . $datetime . '</b></p></div>
+      </div>
+      </div>';
+    }
+    ?>
+    <a href=""></a>
+    <!-- <a href="sms:+91' . $mobileno . '" class="btn btn-primary">Send Requast by SMS</a>
+    <a href="mailto:' . $email . '?subject=Request&body=' . $massage . '" class="btn btn-primary">Send Requast by Email</a> -->
+  <!-- <button type="button" class="btn btn-primary">Send Requast</button> -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
