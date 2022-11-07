@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar sticky-top navbar-expand-lg ">
 <a class="navbar-brand" href="index.php">
     <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
     We Need Food

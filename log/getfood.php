@@ -60,7 +60,7 @@ if (!$conn) {
           <p class="text-center " >'.$howmuchfoodforpeople.'</p>
         </div>
       </div>
-        <button type="button" class="btn text-center"><p><b> Get All information</b></p></button>
+        <a href="getfoodinfo.php?catid='.$id.'" class="btn">See All Information</a>
       <div class="timetext mt-2"><p style="font-size: 12px;" ><b>Posted At '.$date_time.'</b></p></div>
     </div>
   </div>';
@@ -82,7 +82,8 @@ if (!$conn) {
               <p class="text-center " >Hii Rohit</p>
             </div>
           </div>
-            <button type="button" class="btn text-center"><p><b> Get All information</b></p></button>
+            <!-- <button type="button" class="btn text-center"><p><b> Get All information</b></p></button> -->
+            <button type="button" class="btn btn-primary">Primary</button>
           <div class="timetext mt-2"><p style="font-size: 12px;" ><b>Posted At 11:00 PM</b></p></div>
         </div>
       </div>
