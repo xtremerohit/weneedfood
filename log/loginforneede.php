@@ -34,15 +34,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css" class="css">
   <title>Hello, world!</title>
 </head>
 
 <body>
   <?php include 'navbar.php' ?>
-  <h1 class="text-center mt-1">We Need Food</h1>
-  <img src="icon.png" class="icon" width="80px" height="80px"  alt="">
-  <p class="text-center mt-2">Login Only<br> (NGO's,Restaurants, Wedding Management)</p>
-  <p class="text-center" style="font-size: 34px;"><b>Login<b></p>
+  <div class="bg-image"></div>
+<!--  -->
+<div class="bg-login">
+  <img src="icon.png" class="icon mt-1" width="60px" height="60px" max-width="80px" max-height="80px"  alt="">
+  <p class="text-center">Login Only<br> (NGO's,Restaurants, Wedding Management)</p>
+  <p class="text-center" style="font-size: 20px;"><b>Login<b></p>
   <div class="main-section">
     <div class="card">
       <form action="loginforneede.php" method="post">
@@ -65,51 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </div>
   </div>
-    <!-- Photo slider  -->
-    <div id="carouselExampleIndicators" class="carousel slide mt-3" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item  active">
-      <img src="img1.jpg" style="display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-   width: 50%;
-   height: 400px;
-   background-size: 100% 100%;" class="d-block " alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="img2.jpg" style="display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-   width: 50%;
-   height: 400px;
-   background-size: 100% 100%;" class="d-block" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="img1.jpg" style="display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-   width: 50%;
-   height: 400px;
-   background-size: 100% 100%;" class="d-block" alt="...">
-    </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+
   <!-- Photo slider end -->
   <!-- Separate Popper and Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

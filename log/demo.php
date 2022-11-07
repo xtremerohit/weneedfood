@@ -1,25 +1,3 @@
-<?php
-// ini_set('display_errors', 0);
-session_start();
-include 'dbforgiver.php';
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
-  header("location: index.php");
-  exit;
-}
-
-?>
-<?php
-$server = "localhost";
-$username = "root";
-$password = "";
-// $email = "";
-$database = "foodbank88303";
-
-$conn = mysqli_connect($server, $username, $password, $database);
-if (!$conn) {
-  echo "unsuccess";
-}
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -35,39 +13,7 @@ if (!$conn) {
     <title>Hello, world!</title>
   </head>
   <body>
-  <?php include 'navbar.php' ?>
- <?php 
-  $sql = "SELECT * FROM `food_info`"; 
-  $result = mysqli_query($conn, $sql);
-  while($row = mysqli_fetch_assoc($result)){
-    $id = $row['sno'];
-    $usernames = $row['username'];
-    $howmuchfoodforpeople = $row['howmuchfoodforpeople'];
-    $number = $row['mobileNo'];
-    $date_time = $row['dt'];
-
-    echo '<div class="container">
-    <div class="rec1">
-      <div class="container2">
-        <div class="profile"></div>
-        <div class="usernametext"><p><b>@'.$usernames.'</b></p></div>
-      </div>
-      <div class="rec2 text-center">
-        <div class="we">
-          <p>We Have Food!! '.$id.'</p>
-        </div>
-        <div class="info">
-          <p class="text-center " >'.$howmuchfoodforpeople.'</p>
-        </div>
-      </div>
-        <button type="button" class="btn text-center"><p><b> Get All information</b></p></button>
-      <div class="timetext mt-2"><p style="font-size: 12px;" ><b>Posted At '.$date_time.'</b></p></div>
-    </div>
-  </div>';
-
-
-  }
-  ?>
+  
       <div class="container">
         <div class="rec1">
           <div class="container2">
@@ -82,7 +28,7 @@ if (!$conn) {
               <p class="text-center " >Hii Rohit</p>
             </div>
           </div>
-            <button type="button" class="btn text-center"><p><b> Get All information</b></p></button>
+          <button type="button text-center" class="btn">Get All Information</button>
           <div class="timetext mt-2"><p style="font-size: 12px;" ><b>Posted At 11:00 PM</b></p></div>
         </div>
       </div>

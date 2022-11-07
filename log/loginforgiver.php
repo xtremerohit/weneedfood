@@ -16,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     session_start();
     $_SESSION['loggedin'] = true;
     $_SESSION['username'] = $username;
+    include 'dbforfoodbank.php';
+    
     header("location: insertfood.php");
   } else {
     $showError = "Invalid Credentials";
@@ -34,20 +36,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css" class="css">
   <title>Hello, world!</title>
 </head>
 
 <body>
   <?php include 'navbar.php' ?>
-  <h1 class="text-center mt-1">We Need Food</h1>
-  <img src="icon.png" class="icon" width="80px" height="80px" alt="">
+  <div class="bg-image"></div>
+  <div class="bg-login">
+  <img src="icon.png" class="icon" width="80px" height="80px" max-width="80px" max-height="80px" alt="">
   <H4 class="text-center mt-2">Login Only<br> (NGO's,Restaurants,Wedding Managemants ect)</H4>
   <p class="text-center" style="font-size: 34px;"><b>Login<b></p>
   <div class="main-section">
     <div class="card">
+
       <form action="loginforgiver.php" method="post">
         <div class="form-group">
-          <input type="text" class="form-control" id="username" name="username" placeholder="Username" aria-describedby="emailHelp">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username" maxlength="12" minlength="10" aria-describedby="emailHelp">
 
         </div>
         <div class="form-group">
@@ -61,56 +66,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="signupforgiver.php">
           <button class="btn"><b>SignUp<b></button>
         </form>
+
+
       </div>
     </div>
   </div>
   </div>
-  <!-- Photo slider  -->
-  <div id="carouselExampleIndicators" class="carousel slide mt-3" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item  active">
-      <img src="img1.jpg" style="display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-   width: 50%;
-   height: 400px;
-   background-size: 100% 100%;" class="d-block " alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="img2.jpg" style="display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-   width: 50%;
-   height: 400px;
-   background-size: 100% 100%;" class="d-block" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="img1.jpg" style="display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-   width: 50%;
-   height: 400px;
-   background-size: 100% 100%;" class="d-block" alt="...">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-  <!-- Photo slider end -->
+  
   <!-- Separate Popper and Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

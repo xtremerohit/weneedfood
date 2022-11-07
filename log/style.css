@@ -1,6 +1,4 @@
-body {
-    background-color: #d2cbcb;
-  }
+
   .form-control {
     display: flex;
     flex-direction: column;
@@ -42,6 +40,7 @@ body {
     background: rgb(112, 117, 118);
   }
   .navbar{
+    
     background: rgb(249, 11, 122);
     font-weight: bold;
     color: black;
@@ -68,6 +67,7 @@ body {
     padding-right: 15px;
     padding-bottom: 12px;
     box-sizing: border-box;
+    box-shadow: 122px;
   }
 .icon {
   display: flex;
@@ -75,3 +75,4 @@ body {
   margin-left: auto;
   margin-right: auto;
   }
+  /* style for toast */
