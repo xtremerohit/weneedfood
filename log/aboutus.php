@@ -11,6 +11,7 @@
     <title>About Us</title>
   </head>
   <body>
+    <h1 class="text-center">About</h1>
 
     <!-- Separate Popper and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
