@@ -5,6 +5,15 @@ include 'dbforgiver.php';
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
   header("location: index.php");
   exit;
+}elseif (isset($_SESSION['loggedin'])) {
+  $check = $_SESSION['username'];
+  $sql = "SELECT * FROM `givers` WHERE `giversName` = '$check' ";
+
+  $result = mysqli_query($conn, $sql);
+  $num = mysqli_num_rows($result);
+  if ($num == 0) {
+    header("location: loginforgiver.php");
+  }
 }
 
 ?>
@@ -64,6 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+  
   <?php include 'navbar.php' ?>
   <?php
   if ($showAlert) {

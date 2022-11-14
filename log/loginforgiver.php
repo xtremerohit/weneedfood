@@ -66,8 +66,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="signupforgiver.php">
           <button class="btn"><b>SignUp<b></button>
         </form>
-
-
       </div>
     </div>
   </div>
