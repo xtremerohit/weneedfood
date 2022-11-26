@@ -36,37 +36,56 @@ if (!$conn) {
   </head>
   <body>
   <?php include 'navbar.php' ?>
+  <div class="row row-cols-1 row-cols-md-5 mt-3 ml-4 mr-4" style="margin-left: auto; margin-right:auto; border-radius: 15px; width: auto; height: 230px; ">
  <?php 
   $sql = "SELECT * FROM `food_info`"; 
   $result = mysqli_query($conn, $sql);
   while($row = mysqli_fetch_assoc($result)){
     $id = $row['sno'];
     $usernames = $row['username'];
+    $addres = $row['address'];
     $howmuchfoodforpeople = $row['howmuchfoodforpeople'];
     $number = $row['mobileNo'];
     $date_time = $row['dt'];
 
-    echo '<div class="container">
-    <div class="rec1" style="max-width: 334px;
-    max-height: 234px;">
-      <div class="container2">
-        <div class="profile">
-        <img src="https://i.pravatar.cc/64" alt="">
-        </div>
-        <div class="usernametext"><p><b>@'.$usernames.'</b></p></div>
+    
+
+  echo '<div class="row mb-2" style="margin-left: auto;"> 
+  <div class="card" style="width: 18rem; border-radius: 15px; margin-left: auto; margin-right:auto; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); margin-top: 23px; margin-bottom:23px;">
+  <div class="userimg ml-2 mr-2 mt-2 mb-2" style="display: flex; flex-direction: row; width: 35px; height: 35px; border-radius: 50%; background: red;">
+  <img src="https://i.pravatar.cc/35" style="border-radius: 50%; margin:auto;" alt="" class="restoprofile">
+  <p class="restoname ml-2 mr-2" style="font-weight: bold; font-size: 18px; margin-top: auto; margin-bottom:auto;">@'.$usernames.'</p>
       </div>
-      <div class="we text-center">
-        <p>We Have Food For Donation!!!</p>
+      <div class="card-body">
+      <p class="text-center" style="font-weight: bold; color: black;">We Have Food For Donation!!!</p>
+      <p class="text-center" style="font-weight: bold; color: red;">Address </p>
+      <h6 class="text-center mt-1 mb-2">' . $addres . '</h6>
+      <a href="getfoodinfo.php?catid='.$id.'">
+      
+  <button class="edit" style="display: block;margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  width: 125px;
+  height: 40px;
+  border-radius: 25px;
+  box-shadow: inset 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+  background: #8f71ff; color: #000000;
+  font-weight: bold;">See Full info</button>
+</a>
+<p class="text-center mt-3 ">posted at '.$date_time.'</p>
+      </div>
+      </div>
       </div>
       
-        <a href="getfoodinfo.php?catid='.$id.'" class="btn">See All Information</a>
-      <div class="timetext mt-2"><p style="font-size: 12px;" ><b>Posted At '.$date_time.'</b></p></div>
-    </div>
-  </div>';
+      ';
+
+      
 
 
   }
   ?>
+  </div>
  
 
 <!--  -->
